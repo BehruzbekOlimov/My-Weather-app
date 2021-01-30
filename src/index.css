@@ -1,0 +1,120 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.7s,0s color;
+}
+.loading{
+  display: block;
+  margin-top: 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 6px solid darkorange;
+  border-top-color: transparent;
+  animation: circle linear 0.7s infinite forwards;
+}
+@keyframes circle {
+  from{
+    transform: rotate(0);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+.App{
+  width: 100%;
+  min-height: 100vh;
+  background-color: skyblue;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: black;
+}
+.InputPane{
+  margin-top: 50px;
+  font-family: Consolas,sans-serif;
+  display: flex;
+  width: 400px;
+}
+.Body{
+  font-family: Consolas,sans-serif;
+  width: 400px;
+}
+.InputPane input::placeholder{
+  color: #0007;
+}
+.InputPane input{
+  font-size: 22px;
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  border-bottom: 1px black solid;
+  color: black;
+  text-transform: capitalize;
+  padding: 6px 24px;
+  border-radius: 8px 8px 0 0;
+  outline: none;
+}
+.col-3{
+  width: 30%;
+  padding-left: 12px;
+}
+.col-9{
+  width: 70%;
+  padding-right: 12px;
+}
+.InputPane input:focus{
+  /*background-color: #0001;*/
+}
+.InputPane button{
+  font-size: 22px;
+  padding: 8px 0;
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+.InputPane button:hover{
+  background-color: black;
+  color: white;
+}
+.d-flex{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  font-size: 18px;
+}
+h1{
+  font-size: 42px;
+}
+h2{
+  font-size: 40px;
+}
+h3{
+  font-size: 26px;
+}
+.mb-2{
+  margin-bottom: 20px;
+}
+@media (max-width: 420px) {
+  .App{
+    padding: 0 12px;
+  }
+  .InputPane{
+    width: 100%;
+  }
+  .Body{
+    width: 100%;
+  }
+  h1{
+    font-size: 32px;
+  }
+  h2{
+    font-size: 30px;
+  }
+  h3{
+    font-size: 20px;
+  }
+}
